@@ -91,7 +91,16 @@
 .tab-border{
     border-bottom: var(--primary-color) 4px solid;
 }
+/*Hide content initially*/
+#tab-1-content,
+#tab-2-content,
+#tab-3-content{
+    display: none;
+}
 
+.show{
+    display: block !important;
+}
 /*Tab content*/
 .tab-content{
     padding: 3rem 0;
