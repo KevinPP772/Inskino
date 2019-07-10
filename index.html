@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/d30c73efb8.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
     <title>InsKino - Watch TV Shows & Movies Online </title>
 </head>
 
@@ -15,7 +16,7 @@
     <header class="showcase">
         <div class="showcase-top">
             <img src="img/logo.png" alt="InsKino">
-            <a href="#" class="btn btn-rounded">Sign In</a>
+            <a onclick="document.getElementById('id01').style.display='block'" class="btn btn-rounded">Log in</a>
         </div>
         <div class="showcase-content">
             <h1>See what's next</h1>
@@ -23,6 +24,36 @@
             <a href="#" class="btn btn-xl">Watch free for 30 Days <i class="fas fa-chevron-right btn-icon"></i> </a>
         </div>
     </header>
+    <!--Modal Content (Log In)-->
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+
+        <!--Modal Content-->
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <img src="img/img_avatar.png" alt="Avatar" class="avatar">
+            </div>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Log In</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember">Remember Me
+                </label>
+            </div>
+
+            <div class="container" style="background-color: #f1f1ff">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+    <!--Modal Content (Log In) Ends-->
     <!--Showcase Ends-->
     <!--Tab Section-->
     <section class="tabs">
@@ -181,6 +212,7 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>
